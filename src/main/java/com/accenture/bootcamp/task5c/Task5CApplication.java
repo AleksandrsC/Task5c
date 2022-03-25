@@ -29,6 +29,9 @@ public class Task5CApplication {
 			IPAddress ipa = restTemplate.getForObject(
 					"http://ip.jsontest.com/", IPAddress.class);
 			log.info(ipa.toString());
+			Quote quote=restTemplate.getForObject(
+					"http://localhost:8080/quote", Quote.class);
+			log.info(quote.toString());
 		};
 	}
 
